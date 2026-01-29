@@ -1,0 +1,6 @@
+model CSTR_SteadyState
+  ChemicalProcessLibrary.Interfaces.Feed feed(F = 1, CA = 2);
+  ChemicalProcessLibrary.Reactors.CSTR cstr(V = 1, reaction(A = 1e3, Ea = 50000, T = 350));
+equation
+  connect(feed.outlet, cstr.inlet);
+end CSTR_SteadyState;
