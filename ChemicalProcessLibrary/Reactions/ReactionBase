@@ -1,0 +1,5 @@
+partial model ReactionBase
+  import Modelica.Units.SI;
+  SI.Concentration CA "Reactant concentration";
+  SI.MolarFlowRate r "Reaction rate per volume";
+end ReactionBase;
