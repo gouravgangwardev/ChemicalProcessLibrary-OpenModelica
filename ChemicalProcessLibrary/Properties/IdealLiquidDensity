@@ -1,0 +1,7 @@
+model IdealLiquidDensity
+  import Modelica.Units.SI;
+  parameter SI.Density rho0 = 1000 "Constant density";
+  SI.Density rho;
+equation
+  rho = rho0;
+end IdealLiquidDensity;
