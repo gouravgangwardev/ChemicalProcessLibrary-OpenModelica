@@ -1,0 +1,11 @@
+model CSTR
+  import Modelica.Units.SI;
+  extends ChemicalProcessLibrary.Reactors.BaseReactor;
+  replaceable ChemicalProcessLibrary.Reactions.FirstOrderReaction reaction "Reaction model";
+  SI.Concentration CA_in "Inlet concentration of A";
+  Real X "Conversion of A";
+equation
+  CA_in = inlet.CA;
+  0 = inlet.F*(CA_in - CA) - reaction.r*V;
+  X = (CA_in - CA)/CA_in;
+end CSTR;
