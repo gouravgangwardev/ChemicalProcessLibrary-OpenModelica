@@ -1,0 +1,5 @@
+model BatchReactor_Dynamic
+  ChemicalProcessLibrary.Reactors.BatchReactor reactor(V = 1, reaction(A = 1e3, Ea = 50000, T = 350));
+  annotation(
+    experiment(StartTime = 0, StopTime = 50, Tolerance = 1e-6));
+end BatchReactor_Dynamic;
