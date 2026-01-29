@@ -1,0 +1,12 @@
+model CSTR_ParametricStudy
+  import Modelica.Units.SI;
+  parameter SI.Volume V = 1;
+  parameter SI.VolumeFlowRate F = 1;
+  parameter SI.Concentration CA0 = 2;
+  ChemicalProcessLibrary.Interfaces.Feed feed(F = F, CA = CA0);
+  ChemicalProcessLibrary.Reactors.CSTR cstr(V = V, reaction(A = 1e3, Ea = 50000, T = 350));
+equation
+  connect(feed.outlet, cstr.inlet);
+  annotation(
+    experiment(StartTime = 0, StopTime = 50, Tolerance = 1e-6));
+end CSTR_ParametricStudy;
