@@ -1,0 +1,12 @@
+partial model BaseReactor
+  import Modelica.Units.SI;
+  ChemicalProcessLibrary.Interfaces.MaterialPort inlet;
+  ChemicalProcessLibrary.Interfaces.MaterialPort outlet;
+  parameter SI.Volume V "Reactor volume";
+  SI.Concentration CA "Concentration of A in reactor";
+  SI.MolarFlowRate rA "Reaction rate of A";
+equation
+  inlet.CA = CA;
+  outlet.CA = CA;
+  V*der(CA) = inlet.F*inlet.CA - outlet.F*outlet.CA - rA;
+end BaseReactor;
