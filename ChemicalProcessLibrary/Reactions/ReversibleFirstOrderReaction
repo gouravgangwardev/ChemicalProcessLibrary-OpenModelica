@@ -1,0 +1,16 @@
+model ReversibleFirstOrderReaction
+  import Modelica.Units.SI;
+  extends ChemicalProcessLibrary.Reactions.ReactionBase;
+  parameter SI.Frequency A_f "Forward pre-exponential factor";
+  parameter SI.Frequency A_r "Reverse pre-exponential factor";
+  parameter SI.Energy Ea_f "Forward activation energy";
+  parameter SI.Energy Ea_r "Reverse activation energy";
+  parameter SI.Temperature T = 298.15 "Reaction temperature";
+  parameter Real R(unit = "J/(mol.K)") = 8.314 "Universal gas constant";
+  SI.Frequency kf "Forward rate constant";
+  SI.Frequency kr "Reverse rate constant";
+equation
+  kf = A_f*exp(-Ea_f/(R*T));
+  kr = A_r*exp(-Ea_r/(R*T));
+  r = kf*CA - kr*CA;
+end ReversibleFirstOrderReaction;
