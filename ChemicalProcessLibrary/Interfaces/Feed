@@ -1,0 +1,9 @@
+model Feed
+  import Modelica.Units.SI;
+  parameter SI.VolumeFlowRate F;
+  parameter SI.Concentration CA;
+  ChemicalProcessLibrary.Interfaces.MaterialPort outlet;
+equation
+  outlet.F = F;
+  outlet.CA = CA;
+end Feed;
