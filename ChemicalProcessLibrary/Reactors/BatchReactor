@@ -1,0 +1,9 @@
+model BatchReactor
+  import Modelica.Units.SI;
+  replaceable ChemicalProcessLibrary.Reactions.FirstOrderReaction reaction;
+  parameter SI.Volume V "Reactor volume";
+  SI.Concentration CA(start = 2) "Concentration of A";
+equation
+  der(CA) = -reaction.r;
+  reaction.CA = CA;
+end BatchReactor;
