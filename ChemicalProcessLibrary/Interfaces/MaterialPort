@@ -1,0 +1,4 @@
+connector MaterialPort
+  Modelica.Units.SI.Concentration CA;
+  flow Modelica.Units.SI.VolumeFlowRate F;
+end MaterialPort;
