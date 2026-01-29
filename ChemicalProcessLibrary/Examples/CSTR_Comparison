@@ -1,0 +1,10 @@
+model CSTR_Comparison
+  import Modelica.Units.SI;
+  ChemicalProcessLibrary.Interfaces.Feed feed_irrev(F = 1, CA = 2);
+  ChemicalProcessLibrary.Interfaces.Feed feed_rev(F = 1, CA = 2);
+  ChemicalProcessLibrary.Reactors.CSTR cstr_irrev(V = 1, reaction(A = 1e3, Ea = 50000, T = 350));
+  ChemicalProcessLibrary.Reactors.CSTR cstr_rev(V = 1, redeclare ChemicalProcessLibrary.Reactions.ReversibleFirstOrderReaction reaction(A_f = 1e3, A_r = 5e2, Ea_f = 50000, Ea_r = 48000, T = 350));
+equation
+  connect(feed_irrev.outlet, cstr_irrev.inlet);
+  connect(feed_rev.outlet, cstr_rev.inlet);
+end CSTR_Comparison;
