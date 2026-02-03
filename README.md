@@ -25,29 +25,30 @@ All models strictly use **SI units** (`Modelica.Units.SI`) and avoid hard-coded 
 ChemicalProcessLibrary/
 │
 ├── Interfaces/
-│ ├── MaterialPort.mo # Connector for material flow
-│ └── Feed.mo # Feed source model
+│   ├── MaterialPort.mo
+│   └── Feed.mo
 │
 ├── Reactors/
-│ ├── BaseReactor.mo # Partial base reactor model
-│ ├── CSTR.mo # Continuous Stirred Tank Reactor
-│ └── BatchReactor.mo # Batch reactor model
+│   ├── BaseReactor.mo
+│   ├── CSTR.mo
+│   └── BatchReactor.mo
 │
 ├── Reactions/
-│ ├── ReactionBase.mo # Base reaction interface
-│ ├── FirstOrderReaction.mo # Irreversible first-order kinetics
-│ └── ReversibleFirstOrderReaction.mo
+│   ├── ReactionBase.mo
+│   ├── FirstOrderReaction.mo
+│   └── ReversibleFirstOrderReaction.mo
 │
 ├── Properties/
-│ └── IdealLiquidDensity.mo # Ideal liquid density model
+│   └── IdealLiquidDensity.mo
 │
 ├── Examples/
-│ ├── CSTR_SteadyState.mo # Steady-state CSTR example
-│ ├── BatchReactor_Dynamic.mo # Dynamic batch reactor example
-│ ├── CSTR_ParametricStudy.mo # Parametric study on CSTR
-│ └── CSTR_Comparison.mo # Comparison of reaction kinetics
+│   ├── CSTR_SteadyState.mo
+│   ├── CSTR_ParametricStudy.mo
+│   ├── CSTR_Comparison.mo
+│   └── BatchReactor_Dynamic.mo
 │
 └── README.md
+
 
 
 ---
