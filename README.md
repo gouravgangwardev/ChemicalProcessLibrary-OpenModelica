@@ -40,19 +40,19 @@ All models strictly use **SI units** (`Modelica.Units.SI`) and avoid hard-coded 
 
 ## Screening Task Mapping
 
-### ✅ Step 1 — Steady-State CSTR (Mandatory)
+### Step 1 — Steady-State CSTR (Mandatory)
 - Implemented in `Reactors/CSTR.mo`
 - Demonstrated in `Examples/CSTR_SteadyState.mo`
 - Outputs:
   - Outlet concentration of A
   - Conversion of A
 
-### ✅ Step 2 — Library-Oriented Reactor Design (Mandatory)
+### Step 2 — Library-Oriented Reactor Design (Mandatory)
 - `BaseReactor.mo` implemented as a **partial model**
 - Reaction kinetics implemented as **replaceable models**
 - Reactor models are reusable and extensible
 
-### ⭐ Step 3 — Property & Kinetics Extension (Optional)
+### Step 3 — Property & Kinetics Extension (Optional)
 - Ideal liquid density model included in `Properties/IdealLiquidDensity.mo`
 - Reversible first-order kinetics included
 - Comparative and parametric studies provided
