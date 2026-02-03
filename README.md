@@ -22,32 +22,7 @@ All models strictly use **SI units** (`Modelica.Units.SI`) and avoid hard-coded 
 
 ## Library Structure
 
-ChemicalProcessLibrary/
-│
-├── Interfaces/
-│   ├── MaterialPort.mo
-│   └── Feed.mo
-│
-├── Reactors/
-│   ├── BaseReactor.mo
-│   ├── CSTR.mo
-│   └── BatchReactor.mo
-│
-├── Reactions/
-│   ├── ReactionBase.mo
-│   ├── FirstOrderReaction.mo
-│   └── ReversibleFirstOrderReaction.mo
-│
-├── Properties/
-│   └── IdealLiquidDensity.mo
-│
-├── Examples/
-│   ├── CSTR_SteadyState.mo
-│   ├── CSTR_ParametricStudy.mo
-│   ├── CSTR_Comparison.mo
-│   └── BatchReactor_Dynamic.mo
-│
-└── README.md
+<img width="615" height="895" alt="image" src="https://github.com/user-attachments/assets/af9edcc6-86a1-427d-9319-462b45691629" />
 
 
 
